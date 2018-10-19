@@ -1,0 +1,280 @@
+\documentclass[12pt]{article}
+\usepackage{natbib}
+\usepackage{setspace}
+\usepackage{lingmacros}
+\usepackage{tree-dvips}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{systeme}
+\graphicspath{ {./images/} }
+\title{NS110U Assignment 5}
+\author{Quang Tran}
+\date{October 13, 2018}
+\doublespacing
+\begin{document}
+\maketitle
+
+\section{P19 Chabay \& Sherwood}
+\textbf{Set-up:}\\
+Mass of the planet: $m_p=4\times10^{24}\:kg$\\
+Mass of the star: $m_s=5\times 10^{30} \:kg$\\
+Location of the planet: $\vec{r_p}=\langle 5e11,-2e11,0\rangle \:m$\\
+Location of the star: $\vec{r_s}=\langle -2e11,3e11,0\rangle \:m$\\\\
+\subsection{a}
+The relative position vector $\vec{r}$ pointing from the planet to the star:\\
+$\vec{r}=\vec{r_s}-\vec{r_p}$\\
+$\vec{r}=\langle -2e11,3e11,0\rangle \:m-\langle 5e11,-2e11,0\rangle \:m$\\
+$\vec{r}=\langle -2e11-5e11,3e11-(-2e11),0-0\rangle\: m  $\\
+$\vec{r}=\langle -7e11,5e11,0\rangle \:m$\\
+
+ 
+\subsection{b}
+The distance $d$ between the planet and the start is the magnitude of the relative position vector $\vec{r}$ we found in section (a):\\
+$d=|\vec{r}|$\\
+$d=\sqrt{{(-7e11)}^2+{(5e11)}^2+{0}^2}\:m$\\
+$d=8.602\times 10^{11}\:m$
+
+\subsection{c}
+To find the unit vector, we divide $\vec{r}$ by its magnitude:\\
+$\hat{r}=\frac{\vec{r}}{|\vec{r}|}$\\
+$\hat{r}=\frac{\vec{r}}{d}$\\
+$\hat{r}=\frac{1}{8.602\times 10^{11}\:m}\times \langle -7e11,5e11,0\rangle \:m$\\
+$\hat{r}=\langle -0.813,0.581,0\rangle$\\
+A quick check to see if the magnitude of the unit vector is indeed 1:\\
+$|\hat{r}|=\sqrt{{(-0.813)}^2+{0.581}^2+0^2}=0.999$, pretty close to 1, due to rounding intermediate results.\\
+
+\subsection{d}
+The gravitational force exerted by the star on the planet is given by:\\
+$\vec{F}_{grav\:on\:planet\:by\:star}=-G\frac{m_pm_s}{{|\vec{r}|}^2}(-\hat{r})$\\
+So the magnitude of the force is:\\
+$|\vec{F}_{grav\:on\:planet\:by\:star}|=G\frac{m_pm_s}{{|\vec{r}|}^2}|\hat{r}|$\\
+$|\vec{F}_{grav\:on\:planet\:by\:star}|=6.7\times10^{-11}\:Nm^2kg^{-2}\times\frac{4\times10^{24}\:kg\times 5\times10^{30}\:kg}{{(8.602\times 10^{11}\:m)}^2}\times 1$\\
+$|\vec{F}_{grav\:on\:planet\:by\:star}|=1.810\times 10^{21}\:N$\\
+
+\subsection{e}
+The magnitude of the gravitational force exerted by the planet on the star is the same of that of the force exerted by the star on the planet (Newton's third law states that the pair of forces are equal in magnitude but opposite in directions):\\
+$|\vec{F}_{grav\:on\:star\:by\:planet}|=|\vec{F}_{grav\:on\:planet\:by\:star}|$\\
+$|\vec{F}_{grav\:on\:star\:by\:planet}|=1.810\times 10^{21}\:N$
+
+\subsection{f}
+As mentioned in section d: \\
+$\vec{F}_{grav\:on\:planet\:by\:star}=-G\frac{m_pm_s}{{|\vec{r}|}^2}(-\hat{r})$\\
+$\vec{F}_{grav\:on\:planet\:by\:star}=G\frac{m_pm_s}{{|\vec{r}|}^2}\hat{r}$\\
+$\vec{F}_{grav\:on\:planet\:by\:star}=|\vec{F}_{grav\:on\:planet\:by\:star}|\hat{r}$\\
+$\vec{F}_{grav\:on\:planet\:by\:star}=1.810\times 10^{21}\:N\:\langle -0.813,0.581,0\rangle $\\
+$\vec{F}_{grav\:on\:planet\:by\:star}=1.810\times 10^{21}\:N\:\langle -0.813,0.581,0\rangle $\\
+$\vec{F}_{grav\:on\:planet\:by\:star}=\langle -1.471\times10^{21},1.051\times10^{21},0\rangle \:N$\\
+
+\subsection{g}
+The force exerted on the star by the planet is opposite in direction with the force exerted on the planet by the star:\\
+$\vec{F}_{grav\:on\:star\:by\:planet}=-\vec{F}_{grav\:on\:planet\:by\:star}$\\
+$\vec{F}_{grav\:on\:star\:by\:planet}=-\langle -1.471\times10^{21},1.051\times10^{21},0\rangle \:N$\\
+$\vec{F}_{grav\:on\:star\:by\:planet}=\langle 1.471\times10^{21},-1.051\times10^{21},0\rangle \:N$
+
+\section{Two Stars Problem}
+Consider a system of the only two stars. Since each is revolving in a circular orbit, there must be a centripetal force acting on each of them. The only forces present here is the gravitational forces exerting by one on the other star. Since the gravitational force has the direction straight from one star to the other, and the gravitational force also needs to go through the center of the circular orbits, we have that the center and the two stars must lie on the same line. We have the following figure:\\
+$$\includegraphics[scale=0.5]{stars}$$
+Since the distance between the two stars is $r$,\\
+\begin{equation}
+r=r_1+r_2. 
+\end{equation}
+For each star, because there is no force parallel to the instantaneous direction of motion, the magnitude of the momentum is unchanged (only the direction is changed), so we have that the speed of the star, $v_1$ and $v_2$, remains constant. \\
+The centripetal force acting on $m_1$ is the gravitational force exerted by $m2$:\\
+$F_{on \:1 \:by\: 2}=G\frac{m_1m_2}{r^2}=m_1a_1$ ($a_1$ is the centripetal acceleration of $m_1$)\\
+$\implies a_1=\frac{Gm_2}{r^2}$\\
+But we also know that $a_1=\frac{{v_1}^2}{r_1}$, so:\\
+\begin{equation}
+\frac{{v_1}^2}{r_1}=\frac{Gm_2}{r^2}
+\end{equation}
+Similarly we get:\\
+\begin{equation}
+\frac{{v_2}^2}{r_2}=\frac{Gm_1}{r^2}
+\end{equation}
+Since the two stars have the same angular velocity: \\
+$\omega=\frac{v_1}{r_1}=\frac{v_2}{r_2}$\\
+$\frac{v_1}{r_1}=\frac{v_2}{r_2}$\\
+$\frac{{v_1}^2}{{r_1}^2}=\frac{{v_2}^2}{{r_2}^2}$\\
+$\frac{Gm_2}{r^2r_1}=\frac{Gm_1}{r^2r_2}$ (using equations (2) and (3))\\
+$\frac{m_2}{r_1}=\frac{m_1}{r_2}$\\
+Therefore we have:
+\begin{equation}
+m_1r_1-m_2r_2=0
+\end{equation}
+From (1) and (4) we have the system of two equations:\\
+\[
+\systeme*{m_1r_1-m_2r_2=0,r_1+r_2=r }
+\]\\
+In the first equation of the system:\\
+$m_1r_1-m_2r_2=0$\\
+$m_1r_1-m_2(r-r_1)=0$ (from the second equation of the system)\\
+$r_1(m_1+m_2)=m_2r$\\
+$r_1=\frac{m_2r}{m_1+m_2}$\\\\
+From (2):\\
+$v_1=\sqrt{\frac{Gm_2r_1}{r^2}}$\\
+$v_1=\frac{\sqrt{Gm_2r_1}}{r}$\\
+$v_1=\frac{\sqrt{Gm_2}}{r}\sqrt{r1}$\\
+$v_1=\frac{\sqrt{Gm_2}}{r}\sqrt{\frac{m_2r}{m_1+m_2}}$\\
+$v_1=m_2\sqrt{\frac{G}{r(m_1+m_2)}}$\\\\
+The period of the motion:\\
+$T=\frac{2\pi r_1}{v_1}$\\
+$T=2\pi \frac{m_2r}{m_1+m_2}\frac{\sqrt{r(m_1+m_2)}}{m_2\sqrt{G}}$\\
+$T=2\pi r\sqrt{\frac{r}{G(m_1+m_2)}}$\\
+
+
+
+
+\section{Galilean Relativity}
+\subsection{Use the Galilean transformations to formally derive the Galilean addition of velocities rule}
+Suppose we have two inertial frames $F_1$ and $F_2$, and $F_2$ moves with velocity $\vec{v}=\langle v_x,v_y,v_z\rangle$. Suppose observants in $F_1$ and $F_2$ agree on the durations of any phenomena happening, and, therefore, $t_1=t_2=t$. At $t_0=0$, suppose $\vec{r}_0=\langle x_0,y_0,z_0 \rangle$ is the distance vector from the origin of $F_1$ to the origin of $F_2$, and the x-, y-, and z-axes of frame $F_1$ have the same directions as those of $F_2$. We will prove that the velocity $\vec{v}_1$ w.r.t $F_1$ is given by $\vec{v}_1=\vec{v}_2+\vec{v}$, where $\vec{v}_2$ is the velocity according to $F_2$ and $\vec{v}$ is the velocity of $F_2$ w.r.t $F_1$.\\\\
+We have that at time $t$, the distance vector between $F_1$'s origin and $F_2$'s origin is $\vec{r}=\vec{r}_0+\vec{v}t=\langle x_0+v_xt,y_0+v_yt,z_0+v_zt\rangle $. If an object has coordinates $(x_2,y_2,z_2)$ in frame $F_2$, its coordinates w.r.t frame $F_1$ is:\\
+\[
+\systeme*{x_1=x_2+r_x,y_1=y_2+r_y,z_1=z_2+r_z }
+\]\\
+or,\\
+\[
+\systeme*{x_1=x_2+x_0+v_xt,y_1=y_2+y_0+v_yt,z_1=z_2+z_0+v_zt}
+\]\\
+Velocity is the first derivative of position, so:\\
+$v_{1,x}=\frac{dx_1}{dt}=\frac{d}{dt}(x_2+x_0+v_xt)$\\
+$v_{1,x}=\frac{dx_2}{dt}+\frac{dx_0}{dt}+\frac{dv_xt}{dt}$\\
+$v_{1,x}=v_{2,x}+0+v_x$\\
+$v_{1,x}=v_{2,x}+v_x$\\
+Similarly, we get the expression for $v_{1,y}$ and $v_{1,z}$ and combining the results together:\\
+\[
+\systeme*{v_{1,x}=v_{2,x}+v_x,v_{1,y}=v_{2,y}+v_y,v_{1,z}=v_{2,z}+v_z}
+\]\\
+or
+$$\boxed{$$\vec{v}_1=\vec{v}_2+\vec{v}$$ }$$
+
+\subsection{Use the Galilean transformations to show that any two inertial observers will agree on the value of the acceleration of a given object}
+Consider the same set-up as in section \textbf{3.1}, because the two frames are inertial, the acceleration of $F_2$ w.r.t $F_1$ is $\vec{a}=\vec{0}$ and thus $\frac{d\vec{v}}{dt}=\vec{0}$\\
+Acceleration is the first derivative of velocity, so according to frame $F_1$:\\
+$a_{1,x}=\frac{dv_{1,x}}{dt}=\frac{d(v_{2,x}+v_x)}{dt}$\\
+$a_{1,x}=\frac{dv_{2,x}}{dt}+\frac{dv_x}{dt}$\\
+$a_{1,x}=a_{2,x}+0$ (since $\frac{d\vec{v}}{dt}=\vec{0}$)\\
+$a_{1,x}=a_{2,x}$\\
+Similarly, we get the expression for $a_{1,y}$ and $a_{1,z}$ and combining the results together:\\
+\[
+\systeme*{a_{1,x}=a_{2,x},a_{1,y}=a_{2,y},a_{1,z}=a_{2,z}}
+\]\\
+or
+$$\boxed{$$\vec{a}_1=\vec{a}_2$$ }$$\\
+This essentially means that the observants in two frames will agree on the value of the acceleration of a given object.\\
+
+\section{The Plot}
+$$\includegraphics[scale=0.5]{plot}$$
+
+\section{Gravitational Force Between the Sun and the Earth (Revisited)}
+
+\section{P33}
+
+\subsection{a}
+\textbf{Set-up:}\\
+Mass of one mole: $m_{\:1\: mol}=56g=56\times 10^{-3}kg$\\
+Mass density: $\rho=7.87g/cm^3=\frac{7.87\times 10^-3kg}{10^-6m^3}=7870kg/m^3$\\
+Wire length: $L_0=2.5m$\\
+Wire diameter: $D=0.08cm$\\
+Stretch amount: $s=1.27cm=1.27\times10^{-2}m$\\
+Mass of the object: $m=52\:kg$\\\\
+Volume of 1 mol: $\frac{m_{1 mol}}{\rho}=\frac{56\times 10^{-3}kg}{7870kg/m^3}=7.115\times 10^{-6}m^3$\\
+Volume of 1 atom: $\frac{7.115\times 10^{-6}m^3}{6.02\times{10^{23}}}=1.181\times{10^{-29}}m^3$\\
+The number of atoms in a cube with volume $1\:m^3$:\\
+$n=\frac{1m^3}{1.181\times{10^{-29}}m^3/atom}=8.467\times 10^{28}\: atoms$\\
+The number of atoms in one edge of a $1m^3$ cube:\\
+$n_{edge}=\sqrt[3]{n}=\sqrt[3]{8.467\times 10^{28}}=4.39\times10^{9}atoms$\\
+A series of $4.39\times10^{9}atoms$ has a length of $1m$, so the diameter of 1 atom is:\\
+$d=1\:atom\times \frac{1m}{4.39\times10^{9}\:atoms}=2.277\times{10^{-10}}m$ \\
+
+
+\subsection{b}
+Choosing the system that consists of only the mass. The only two forces acting on the mass is the downward gravitational force $F_g$ and the upward tension force by the wire $F_T$. According to the momentum principle, along the vertical direction:\\
+$\Delta p_y={F}_{net,y} \Delta t$\\
+$\Delta p_y=(F_T-F_g)\Delta t$\\
+Since the mass is stationery, $\Delta p_y=0$:\\
+$0=(F_T-F_g)\Delta t$\\
+$F_T=F_g$\\
+$F_T=mg=52kg\times9.8N/kg=509.6N$\\
+The cross-sectional area of the wire:\\
+$A_{wire}=\pi{(D/2)}^2$\\
+$A_{wire}=\pi{(0.08cm/2)}^2=5.026\times 10^{-3}cm^2=5.026\times 10^{-7}m^2$\\\\
+Finding the Young's modulus for iron:\\
+$Y=\frac{stress}{strain}=\frac{F_T/A_{wire}}{s/L_0}$\\
+$Y=\frac{\frac{509.6N}{5.026\times10^{-7}m^2}}{\frac{1.27\times10^{-2}m}{2.5m}}=1.995\times10^{11}kgs^{-2}m^{-1}$\\
+Let us call $k_{s,i}$ the stiffness of an interatomic bond. Using the Young's modulus in terms of atomic quantities specified in Chabay and Sherwood (p.140) we have:\\
+$Y=\frac{k_{s,i}}{d}$\\
+$k_{s,i}=Yd$\\
+$k_{s,i}=1.995\times10^{11}kgs^{-2}m^{-1} \times 2.277\times 10^{-10}m$\\
+$k_{s,i}=45.426\: N/m$
+
+
+\section{P48}
+\subsection{a}
+Since the box does not move on the y-axis (the vertical one), its impulse in any time period is 0. On this axis, the box experience two forces: the normal force from the surface of the belt with magnitude $F_N$ and the gravitational force with magnitude $mg$. Choosing the positive direction upward, from the momentum principle, we have:\\
+$\Delta p_y=F_{net,y}\Delta t$\\
+$0=(F_N-mg)\Delta t$\\
+$F_N = mg = 8kg\times 9.8N/kg=78.4N$\\\\
+Suppose the belt is moving toward the right. At first the box is at rest and then slipping and speeding up until it catches the speed of the belt. This means that there is a friction force acting on the box on the right direction. Since the box, during this time period of speeding up, is moving relative to the belt, it is the kinetic friction. Its magnitude is:\\
+$F_f=\mu_k F_N$\\
+$F_f=0.6\times 78.4N=47.04N$\\
+This is also the net force $F_{net,x}$ acting on the box on the x-axis.\\
+Since on the x-axis, the friction force is constant, we can use the analytical solution in Chabay and Sherwood (p.62), with the initial speed $v_{i,x}=0$\\
+$v_{f,x}=v_{i,x}+\frac{F_{net,x}}{m}t$\\
+$v_{belt}=0+\frac{F_{f}}{m}t$\\
+$t=\frac{v_{belt}m}{F_f}$\\
+$t=\frac{5m/s\times 8kg}{47.04N}$\\
+$t=0.85s$\\
+Therefore, it takes $0.85s$ for the box to reach the final speed.
+
+\subsection{b}
+Let us choose the origin at where the box is initially placed on the belt, so $x_i=0\:m$, and the initial time be the time $t_0=0$ where the box is placed. In the time period from $t_0$ to when it reaches the final speed of $5m/s$, there is a constant force $F_f$ acting on the box, we can use the analytical solution in Chabay and Sherwood (p.62):\\
+$x(t)=x_i+v_{i,x}t+\frac{1}{2}\frac{F_{net,x}}{m}t^2$\\
+$x(t)=x_i+v_{i,x}t+\frac{1}{2}\frac{F_f}{m}t^2$\\
+$x(0.85)=0+0\times 0.85+\frac{1}{2}\frac{47.04N}{8kg}\times{0.85}^2=2.124m$\\
+
+\section{P8}
+\subsection{a}
+Finding the direction of the air resistance: We know that the package is moving horizontally, so it exerts a horizontal net force on the air. By Newton's third law, the force exerted on the package by the air is also horizontal but  opposite the moving direction of the package. We've got the following diagram:\\
+
+\subsection{b}
+At any moment, we choose the origin to be at the location of the package, and the +y direction to be upward. On the y-axis, the package does not move, so the change in its momentum on the axis is 0. According to the momentum principle:\\
+$\Delta p_y=F_{net,y}\Delta t$\\
+$\Delta p_y=(F_{T,y}-F_{g})t$\\
+$0=(F_{T,y}-F_{g})t$\\
+$F_{T,y}=F_{g}=mg=900kg\times 9.8N/kg=8820N$\\
+Let $\phi$ be the angle between the y-axis and the cable, then:\\
+$tan(\phi)=4.5/11$ (inferred from figure 5.66 in the textbook)\\
+$\phi=arctan(4.5/11)=0.388rad$\\
+Also,\\
+$cos(\phi)=F_{T,y}/F_T$\\
+$F_T=F_{T,y}/cos(\phi)=8820N/cos(0.388)=9528.258N$\\
+\subsection{c}
+Since $tan(\phi)=4.5/11=F_{T,x}/F_{T,y}$, $F_{T,x}=4.5F_{T,y}/11=4.5\times 8820N/11=3608.181N$
+The force exerted on the package by the cable is $\vec{F_T}=\langle +F_{T,x},+F_{T,y}\rangle = \langle 3608.181,8820\rangle N$\\
+\subsection{d}
+On the x-axis, the only forces acting on the package are the force by the air $F_{air,x}$ and the horizontal component of the force by the tension in the cable $F_{T,x}$. Because on the horizontal axis the package moves with a constant speed, the change in its momentum is 0. According to the momentum principle:\\
+$\Delta p_x=F_{net,x}\Delta t$\\
+$\Delta p_x=F_{T,x}-F_{air,x}\Delta t$\\
+$0=(F_{T,x}-F_{air,x})\Delta t$\\
+$F_{air,x}=F_{T,x}=3608.181N$\\
+Since there is no y component to the force by air, this result is also its magnitude. In all, $F_{air}=F_{air,x}=3608.181N$.\\
+\subsection{e}
+Since there is no y component to the force exerted by air, $F_{air,y}=0N$. The force on the package by the air as a vector is $\vec{F_{air}}=\langle -F_{air,x},F_{air,y}\rangle = \langle -3608.181,0\rangle N$\\
+\subsection{f}
+From section (b) we found that the tension on in the cable is $9528.258N$, larger than its listed breaking strength $9300N$. The cable is in danger of breaking.\\
+
+\section{P25}
+\subsection{a}
+The proton's momentum at the instance has the same direction as that of its instantaneous velocity. Since its velocity has a direction toward right (the moving direction) and is tangent to the kissing circle at point A, the momentum has the direction d.
+
+\subsection{b}
+There are two components to $d \vec{p}/dt$, the component ${(d\vec{p}/dt)}_{\parallel}$ that is parallel to the proton's momentum, which is responsible for the changes in the magnitude of the proton's momentum, and the component ${(d\vec{p}/dt)}_{\bot}$ perpendicular to the momentum and associated with the change in direction of the motion. Since the speed of the proton $v$ is constant, the magnitude of momentum is unchanged ($mv$), and therefore ${(d\vec{p}/dt)}_{\parallel}$ is zero. Therefore, the direction of ${(d\vec{p}/dt)}_{\bot}$ dictates the direction of ${(d\vec{p}/dt)}$. We know that ${(d\vec{p}/dt)}_{\bot}$ always points toward the center of the kissing circle (and perpendicular to the direction of the momentum, which is d), the direction of ${(d\vec{p}/dt)}_{\bot}$ is, therefore, b, which is also the direction of ${(d\vec{p}/dt)}$. 
+\subsection{c}
+Because the motion is a smooth, curving path and the direction of momentum $\hat{p}$ is not changing abruptly when the proton is at location A, we can apply the approximated result of the magnitude of ${(d\vec{p}/dt)}_{\bot}$ specified in Chabay and Sherwood (p.193):\\
+$|{(d\vec{p}/dt)}_{\bot}|=\frac{mv^2}{R}$\\
+$|{(d\vec{p}/dt)}_{\bot}|=\frac{1.7\times 10^{-27}kg\times{(6.0\times 10^{5}m/s)}^2}{0.07m}$\\
+$|{(d\vec{p}/dt)}_{\bot}|=8.742\times 10^{-15}kg.m/s^2$\\
+From section (b) we know that ${d\vec{p}/dt}$ only has the perpendicular component ${(d\vec{p}/dt)}_{\bot}$, so the magnitude of ${d\vec{p}/dt}$ is also the magnitude of ${(d\vec{p}/dt)}_{\bot}$:\\
+$$|{d\vec{p}/dt}|=8.742\times10^{-15}kg.m/s^2$$
+{\Large Reference\par}
+{\scriptsize Chabay, R. W., \& Sherwood, B. A. (2015). Matter \& interactions. Hoboken, NJ: Wiley.\par}
+\end{document}
